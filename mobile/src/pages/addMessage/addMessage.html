@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Add Person
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+ <ion-content padding>
+<form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>From ID</ion-label>
+      <ion-input type="text" [(ngModel)]="message.from_id" name="from_id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>To ID</ion-label>
+      <ion-input type="text" [(ngModel)]="message.to_id" name="to_id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Message</ion-label>
+      <ion-textarea [(ngModel)]="message.msg" name="msg"></ion-textarea>
+    </ion-item>
+
+</form>
+ </ion-content>
+
+ <ion-footer>
+    <ion-toolbar color="primary">
+      <ion-buttons>
+        <button ion-button icon-left (click)="sendRequest()">
+          <ion-icon name="cloud-upload"></ion-icon>Create
+        </button> 
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
